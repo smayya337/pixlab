@@ -1,1 +1,8 @@
 PixLabProject_ShreyasMayya.java
+.idea
+*.gpj
+*.iml
+classes
+out
+test
+canvas
