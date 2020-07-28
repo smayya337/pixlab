@@ -12,7 +12,7 @@ import javax.imageio.ImageIO;
 
 public class DisplayPix extends JPanel {
    private PixelOperations pix = new PixelOperations();
-   public ImageIcon i = new ImageIcon("images/640x480.jpg");
+   public ImageIcon i = new ImageIcon("../images/640x480.jpg");
    private ImageIcon message, moon;
    private BufferedImage img = new BufferedImage(i.getIconWidth(), i.getIconHeight(), BufferedImage.TYPE_INT_RGB);
    private Graphics buf = img.getGraphics();
@@ -517,7 +517,7 @@ public class DisplayPix extends JPanel {
 
    public void save() {
       try {
-         JFileChooser fc = new JFileChooser("images");
+         JFileChooser fc = new JFileChooser("../images");
          fc.showOpenDialog(null);
          File f = fc.getSelectedFile();
          ImageIO.write(img, f.getName().substring(f.getName().lastIndexOf(".") + 1), f);
@@ -534,7 +534,7 @@ public class DisplayPix extends JPanel {
     */
 
    private boolean getMessage() {
-      JFileChooser fc = new JFileChooser("images");
+      JFileChooser fc = new JFileChooser("../images");
       fc.showOpenDialog(null);
       File f = fc.getSelectedFile();
       try {
@@ -553,7 +553,7 @@ public class DisplayPix extends JPanel {
     */
 
    private boolean getChroma() {
-      JFileChooser fc = new JFileChooser("images");
+      JFileChooser fc = new JFileChooser("../images");
       fc.showOpenDialog(null);
       File f = fc.getSelectedFile();
       try {
@@ -573,7 +573,7 @@ public class DisplayPix extends JPanel {
    public boolean openImage() {
       int w = img.getWidth();
       int h = img.getHeight();
-      JFileChooser fc = new JFileChooser("images");
+      JFileChooser fc = new JFileChooser("../images");
       fc.showOpenDialog(null);
       File f = fc.getSelectedFile();
       try {
